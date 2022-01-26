@@ -46,13 +46,13 @@ function check(){
             "<td>"+newProduct[i].price1.toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
             "<td>"+newProduct[i].number2+"</td>"+
             "<td>"+newProduct[i].price2.toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
-            "<td>"+a.toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
+            "<td>"+a+"</td>"+
             "<td>"+b.toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
             "<td>"+newProduct[i].costofcapital.toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
             "<td>"+(newProduct[i].costofcapital/newProduct[i].sell).toLocaleString('vi-VN',{style:'currency',currency:'VND'})+"</td>"+
-            "<td><button onclick='nhapHang("+i+")' style='width: 100%'>Nhập kho</button></td>"+
-            "<td><button onclick='xuatHang("+i+")' style='width: 100%'>Xuất kho</button></td>"+
-            "<td><button onclick='Xoa("+i+")' style='width: 100%'>Xóa</button></td>"+
+            "<td><button onclick='nhapHang("+i+")'class='custom-btn btn-5'>Nhập kho</button></td>"+
+            "<td><button onclick='xuatHang("+i+")' class='custom-btn btn-5'>Xuất kho</button></td>"+
+            "<td><button onclick='Xoa("+i+")' class='custom-btn btn-14'>Xóa</button></td>"+
         "</tr>"
         content +=temp;
     }

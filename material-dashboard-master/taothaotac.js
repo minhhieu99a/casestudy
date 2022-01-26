@@ -98,9 +98,9 @@ function showAllProduct() {
     content += "</table>";
     document.getElementById("content").innerHTML=content;
 }
-function checkExist(name){
+function checkExist(name,code){
     for (let i = 0; i < product.length; i++) {
-        if(product[i].name==name){return true
+        if(product[i].name==name||product[i].code==code){return true
         }
     }return false
 }
@@ -118,10 +118,10 @@ function creatOldProduct(){
     let sell=Number(document.getElementById("sell").value);
     let newproduct =new Product(name,code,unit,number,price,number1,price1,number2,price2,costofcapital,sell);
     if (number>0 && price>0 && sell>0&&sell<1){
-        if (!checkExist(name)){
+        if (!checkExist(name,code)){
             product.push(newproduct);
             showAllProduct();
-        }else {alert("Tên mặt hàng đã được khai báo . Mời bạn nhập lại")}
+        }else {alert("Tên mặt hàng hoặc mã hàng đã được khai báo . Mời bạn nhập lại")}
     }else {alert("Bạn đã nhập sai . Mời bạn nhập lại")}
     document.getElementById("newproduct").value="";
     document.getElementById("newproductcode").value="";
